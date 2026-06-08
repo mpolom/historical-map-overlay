@@ -24,10 +24,10 @@
         attribution: '© MapTiler',
         }).addTo(map);
 
-        const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '© OpenStreetMap'
-        });
+        }).addTo(map);
 
         // URL to your GPX file or the GPX itself as a XML string.
         const url = './route.gpx';
