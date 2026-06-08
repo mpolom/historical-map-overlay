@@ -28,7 +28,13 @@ const options = {
     polyline_options: { color: 'green' }
 };
 
-new Marker([51.45994857367072, -0.16281375795570904], {title:'The home of Edward Thomas'}).addTo(map);
+const MapIcon = new Icon({
+    iconUrl: './house-solid.svg',
+    iconSize: [18, 18],
+    iconAnchor: [18, 18]
+});
+
+new Marker([51.45994857367072, -0.16281375795570904], {title:'The home of Edward Thomas', icon: MapIcon}).addTo(map);
 
 const allBounds = new LatLngBounds();
 let loadedCount = 0;
