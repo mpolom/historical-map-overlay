@@ -19,15 +19,16 @@
         import { Map, TileLayer } from 'leaflet';
         import { GPX } from 'leaflet-gpx';
 
-        const map = new Map('map', {layers: [osm, cities]});
-        new TileLayer('https://api.maptiler.com/tiles/uk-osgb10k1888/{z}/{x}/{y}.jpg?key=BnDgv89mXDjK9jv4TIw9', {
-        attribution: '© MapTiler',
-        }).addTo(map);
+        var historical = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        });
 
-        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '© OpenStreetMap'
-        }).addTo(map);
+        var osm = L.tileLayer('https://api.maptiler.com/tiles/uk-osgb10k1888/{z}/{x}/{y}.jpg?key=BnDgv89mXDjK9jv4TIw9', {
+            attribution: '© MapTiler'});
+
+        var map = L.map('map', {
+            layers: [osm, historical]
+        });
 
         // URL to your GPX file or the GPX itself as a XML string.
         const url = './route.gpx';
