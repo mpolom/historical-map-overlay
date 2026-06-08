@@ -16,12 +16,15 @@
         }
     </script>
     <script type="module">
-        import { Map, TileLayer } from 'leaflet';
+        import { Map, TileLayer, Control } from 'leaflet';
         import { GPX } from 'leaflet-gpx';
 
         const map = new Map('map');
         new TileLayer('https://api.maptiler.com/tiles/uk-osgb10k1888/{z}/{x}/{y}.jpg?key=BnDgv89mXDjK9jv4TIw9', {
-        attribution: '© MapTiler',
+        attribution: '&copy; MapTiler',
+        }).addTo(map);
+        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
 
         // URL to your GPX file or the GPX itself as a XML string.
@@ -34,6 +37,14 @@
         new GPX(url, options).on('loaded', (e) => {
         map.fitBounds(e.target.getBounds());
         }).addTo(map);
+        
+        new Control.Layers(
+          {
+            "Historic OS 1888-1913": historic,
+            "OpenStreetMap Modern": osm
+          }
+        ).addTo(map);
+
         </script>
   <style>
     #map { height: 100vh; }
