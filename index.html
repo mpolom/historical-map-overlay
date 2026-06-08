@@ -19,31 +19,31 @@
         import { Map, TileLayer, Control } from 'leaflet';
         import { GPX } from 'leaflet-gpx';
 
-        const map = new Map('map');
+        const historic = new Map('map');
         new TileLayer('https://api.maptiler.com/tiles/uk-osgb10k1888/{z}/{x}/{y}.jpg?key=BnDgv89mXDjK9jv4TIw9', {
         attribution: '&copy; MapTiler',
-        }).addTo(map);
-        new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        });
+        const osm = new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        }).addTo(map);
-
+        });
+        historic.addTo(map);
+        
         // URL to your GPX file or the GPX itself as a XML string.
         const url = 'route.gpx';
         const options = {
-        async: true,
-        polyline_options: { color: 'red' },
+          async: true,
+          polyline_options: { color: 'green' },
         };
 
         new GPX(url, options).on('loaded', (e) => {
         map.fitBounds(e.target.getBounds());
         }).addTo(map);
         
-        new Control.Layers(
-          {
-            "Historic OS 1888-1913": historic,
-            "OpenStreetMap Modern": osm
-          }
-        ).addTo(map);
+        const baseLayers = {
+          "Historic OS 1888-1913": historic,
+          "OpenStreetMap Modern": osm
+        }
+        new Control.Layers(baseLayers).addTo(map);
 
         </script>
   <style>
