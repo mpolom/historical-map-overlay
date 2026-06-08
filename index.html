@@ -7,6 +7,15 @@
 
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+  <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
+          "leaflet-gpx": "./gpx.js"
+        }
+      }
+  </script>
 
   <style>
     #map { height: 100vh; }
@@ -16,14 +25,6 @@
 
 <div id="map"></div>
 
-<script type="importmap">
-    {
-    "imports": {
-        "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
-        "leaflet-gpx": "./gpx.js"
-    }
-    }
-</script>
 <script type="module">
     import { Map, TileLayer, Control } from 'leaflet';
     import { GPX } from 'leaflet-gpx';
@@ -31,12 +32,8 @@
     const map = new Map('map',{center:[51.505, -0.09], zoom:13});
 
     const historic new TileLayer('https://api.maptiler.com/tiles/uk-osgb10k1888/{z}/{x}/{y}.jpg?key=BnDgv89mXDjK9jv4TIw9', {
-    attribution: '&copy; MapTiler',
+      attribution: '&copy; MapTiler',
     });
-    const osm = new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    });
-
     historic.addTo(map);
 
     // URL to your GPX file or the GPX itself as a XML string.
@@ -49,12 +46,6 @@
     new GPX(url, options).on('loaded', (e) => {
     map.fitBounds(e.target.getBounds());
     }).addTo(map);
-    
-    const baseLayers = {
-      "Historic OS 1888-1913": historic,
-      "OpenStreetMap Modern": osm
-    }
-    new Control.Layers(baseLayers).addTo(map);
 
 </script>
 </body>
