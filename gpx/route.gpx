@@ -13,6 +13,24 @@
   </copyright>
   <link href="https://www.strava.com/routes/3422544751346176014"/>
  </metadata>
+ <wpt lat="51.45979" lon="-0.16345">
+  <name>Edward Thomas' House</name>
+  <desc></desc>
+  <sym>Generic</sym>
+  <type>Generic</type>
+ </wpt>
+ <wpt lat="51.23424" lon="-0.33718">
+  <name>The Old Clunker</name>
+  <desc></desc>
+  <sym>Bike Shop</sym>
+  <type>Bike Shop</type>
+ </wpt>
+ <wpt lat="51.17317" lon="-0.77173">
+  <name>Farnham Brewing</name>
+  <desc></desc>
+  <sym>Restaurant</sym>
+  <type>Restaurant</type>
+ </wpt>
  <trk>
   <name>In Pursuit of Spring Day 1 - Clapham</name>
   <desc>As close as I can get it…</desc>
@@ -728,64 +746,67 @@
     <ele>3.0</ele>
    </trkpt>
    <trkpt lat="51.48800500163697" lon="-0.01799499644587207">
-    <ele>2.95</ele>
+    <ele>3.0</ele>
    </trkpt>
    <trkpt lat="51.487750000000005" lon="-0.01737">
-    <ele>2.89</ele>
+    <ele>2.91</ele>
    </trkpt>
    <trkpt lat="51.487370000000006" lon="-0.01624">
-    <ele>2.8000000000000003</ele>
+    <ele>2.7700000000000005</ele>
    </trkpt>
    <trkpt lat="51.487280000000005" lon="-0.01563">
-    <ele>2.75</ele>
+    <ele>2.7700000000000005</ele>
    </trkpt>
    <trkpt lat="51.487210000000005" lon="-0.01471">
-    <ele>2.87</ele>
+    <ele>2.9400000000000004</ele>
    </trkpt>
    <trkpt lat="51.48724000000001" lon="-0.013340000000000001">
-    <ele>3.06</ele>
+    <ele>3.08</ele>
    </trkpt>
    <trkpt lat="51.48733000000001" lon="-0.01254">
-    <ele>2.68</ele>
+    <ele>2.5900000000000003</ele>
    </trkpt>
    <trkpt lat="51.48752" lon="-0.011240000000000002">
-    <ele>2.4000000000000004</ele>
+    <ele>2.4200000000000004</ele>
    </trkpt>
    <trkpt lat="51.487730000000006" lon="-0.010180000000000002">
-    <ele>2.37</ele>
+    <ele>2.3800000000000003</ele>
    </trkpt>
    <trkpt lat="51.48767" lon="-0.010110000000000001">
-    <ele>2.45</ele>
+    <ele>2.4600000000000004</ele>
    </trkpt>
    <trkpt lat="51.487190000000005" lon="-0.009770000000000001">
-    <ele>3.86</ele>
+    <ele>3.87</ele>
    </trkpt>
    <trkpt lat="51.48671" lon="-0.00939">
-    <ele>4.34</ele>
+    <ele>4.36</ele>
    </trkpt>
    <trkpt lat="51.48662" lon="-0.009340000000000001">
-    <ele>4.050000000000001</ele>
+    <ele>4.08</ele>
    </trkpt>
    <trkpt lat="51.486610000000006" lon="-0.0094">
-    <ele>4.050000000000001</ele>
+    <ele>3.8400000000000003</ele>
    </trkpt>
    <trkpt lat="51.48657000000001" lon="-0.00941">
-    <ele>3.69</ele>
+    <ele>3.8400000000000003</ele>
    </trkpt>
    <trkpt lat="51.486520000000006" lon="-0.00936">
-    <ele>3.69</ele>
+    <ele>3.7</ele>
    </trkpt>
    <trkpt lat="51.48657000000001" lon="-0.009330000000000001">
     <ele>3.3800000000000003</ele>
    </trkpt>
-   <trkpt lat="51.48572500007115" lon="-0.009545004016142791">
-    <ele>-1.67</ele>
+   <trkpt lat="51.48628" lon="-0.0094">
+    <ele>1.68</ele>
    </trkpt>
-   <trkpt lat="51.484880000000004" lon="-0.009760000000000001">
-    <ele>1.35</ele>
+   <trkpt lat="51.48553250049339" lon="-0.009592509461562086">
+    <ele>-1.41</ele>
    </trkpt>
-   <trkpt lat="51.48408500009029" lon="-0.009965003596717956">
-    <ele>-5.32</ele>
+   <trkpt lat="51.48478500067162" lon="-0.009785012611617456">
+    <ele>-0.11</ele>
+   </trkpt>
+   <trkpt lat="51.484037500534725" lon="-0.009977509450539358">
+    <ele>-4.87</ele>
    </trkpt>
    <trkpt lat="51.483290000000004" lon="-0.01017">
     <ele>3.18</ele>
@@ -824,7 +845,7 @@
     <ele>4.79</ele>
    </trkpt>
    <trkpt lat="51.48277" lon="-0.01306">
-    <ele>4.7700000000000005</ele>
+    <ele>4.630000000000001</ele>
    </trkpt>
    <trkpt lat="51.48277" lon="-0.013240000000000002">
     <ele>4.630000000000001</ele>
@@ -947,7 +968,7 @@
     <ele>6.130000000000001</ele>
    </trkpt>
    <trkpt lat="51.4776" lon="-0.025310000000000003">
-    <ele>6.32</ele>
+    <ele>6.37</ele>
    </trkpt>
    <trkpt lat="51.47758" lon="-0.025370000000000004">
     <ele>6.37</ele>
@@ -1229,7 +1250,7 @@
     <ele>7.300000000000001</ele>
    </trkpt>
    <trkpt lat="51.47357" lon="-0.07248">
-    <ele>7.130000000000001</ele>
+    <ele>6.91</ele>
    </trkpt>
    <trkpt lat="51.47364" lon="-0.0728">
     <ele>6.91</ele>
@@ -1702,8 +1723,8 @@
    <trkpt lat="51.459990000000005" lon="-0.16217">
     <ele>21.120000000000005</ele>
    </trkpt>
-   <trkpt lat="51.459790000000005" lon="-0.16343000000000002">
-    <ele>19.55</ele>
+   <trkpt lat="51.459790000000005" lon="-0.16345">
+    <ele>19.53</ele>
    </trkpt>
    <trkpt lat="51.459790000000005" lon="-0.16344">
     <ele>19.55</ele>
