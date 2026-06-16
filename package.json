@@ -17,8 +17,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gpx": "node js/generate-manifest.js",
-    "gpx:watch": "node js/generate-manifest.js --watch",
-    "gpx:build": "node js/gpx.js"
+    "gpx:watch": "node js/generate-manifest.js --watch"
   },
   "dependencies": {
     "chokidar": "^5.0.0"
