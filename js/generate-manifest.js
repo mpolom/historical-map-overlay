@@ -1,40 +1,52 @@
 const fs = require('fs');
 const path = require('path');
+const chokidar = require('chokidar');
 
-// Move up one level from /js → project root
 const rootDir = path.join(__dirname, '..');
-
-// Base GPX directory
 const baseDir = path.join(rootDir, 'gpx');
-
-// Output file
 const outputFile = path.join(rootDir, 'gpx-index.json');
 
-// Colour palette
 const colors = [
   '#e41a1c', '#377eb8', '#4daf4a',
   '#984ea3', '#ff7f00', '#ffff33',
   '#a65628', '#f781bf'
 ];
 
-const folders = fs.readdirSync(baseDir)
-  .filter(f => fs.statSync(path.join(baseDir, f)).isDirectory())
-  .map((folder, index) => {
+function generateManifest() {
+  const folders = fs.readdirSync(baseDir)
+    .filter(f => fs.statSync(path.join(baseDir, f)).isDirectory())
+    .map((folder, index) => {
 
-    const folderPath = path.join(baseDir, folder);
+      const folderPath = path.join(baseDir, folder);
 
-    const files = fs.readdirSync(folderPath)
-      .filter(f => f.endsWith('.gpx'))
-      .map(f => `gpx/${folder}/${f}`); // path relative to index.html
+      const files = fs.readdirSync(folderPath)
+        .filter(f => f.endsWith('.gpx'))
+        .map(f => `gpx/${folder}/${f}`);
 
-    return {
-      name: folder,
-      color: colors[index % colors.length],
-      files
-    };
-  });
+      return {
+        name: folder
+          .replace(/_/g, ' ')
+          .replace(/\b\w/g, l => l.toUpperCase()),
+        color: colors[index % colors.length],
+        files
+      };
+    });
 
-// Write JSON to project root
-fs.writeFileSync(outputFile, JSON.stringify({ folders }, null, 2));
+  fs.writeFileSync(outputFile, JSON.stringify({ folders }, null, 2));
 
-console.log('✅ gpx-index.json generated');
+  console.log(`✅ Manifest updated (${new Date().toLocaleTimeString()})`);
+}
+
+// Run once immediately
+generateManifest();
+
+// Watch mode
+if (process.argv.includes('--watch')) {
+  console.log('👀 Watching GPX folder for changes...');
+
+  chokidar.watch(baseDir, { ignoreInitial: true })
+    .on('add', generateManifest)
+    .on('unlink', generateManifest)
+    .on('addDir', generateManifest)
+    .on('unlinkDir', generateManifest);
+}
