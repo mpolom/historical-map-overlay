@@ -1,0 +1,26 @@
+{
+  "name": "historical-map-overlay",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mpolom/historical-map-overlay#readme",
+  "bugs": {
+    "url": "https://github.com/mpolom/historical-map-overlay/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpolom/historical-map-overlay.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "./js/generate-manifest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gpx": "node js/generate-manifest.js",
+    "gpx:watch": "node js/generate-manifest.js --watch",
+    "gpx:build": "node js/gpx.js"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "name": "Planned",
+      "color": "#e41a1c",
+      "files": [
+        "gpx/planned/route.gpx",
+        "gpx/planned/route2.gpx",
+        "gpx/planned/route3.gpx",
+        "gpx/planned/route4.gpx"
+      ]
+    },
+    {
+      "name": "Ridden",
+      "color": "#377eb8",
+      "files": [
+        "gpx/ridden/A_limp_and_a_walk.gpx",
+        "gpx/ridden/In_pursuit_of_spring_day_1.gpx",
+        "gpx/ridden/In_pursuit_of_spring_day_2.gpx",
+        "gpx/ridden/In_pursuit_of_spring_day_3.gpx",
+        "gpx/ridden/In_pursuit_of_spring_day_4.gpx"
+      ]
+    }
+  ]
+}
